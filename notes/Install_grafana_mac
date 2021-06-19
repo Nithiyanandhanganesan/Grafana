@@ -1,0 +1,25 @@
+Install grafana on Mac:
+===========================
+
+1) download the tar
+
+curl -O https://dl.grafana.com/oss/release/grafana-8.0.3.darwin-amd64.tar.gz
+
+2) extract the tar
+
+3) go to bin directory & execute the  below cmd
+
+./grafana-server web
+
+4) open browser and go to
+  http://localhost:3000
+
+  default username : admin
+  default password : admin
+
+
+
+Install graphite on Mac:
+==========================
+
+

@@ -1,0 +1,44 @@
+Telemetry:
+===========
+
+-> automatic recording and transmission of data from remote or inaccessible sources to an IT system in a
+differnt location for monitory and analysis.
+
+-> eg: number of event received per minute.
+
+
+Grafana:
+==========
+
+-> bring data from different datasource together.
+-> defines alerts.
+
+Grafana datasouces:
+======================
+-> grafana will not store telemetry data. It just visualize the telemetry data.
+-> so, we need some datasource for the grafana to pull data.
+-> It can pull from variefy of souces such as mysql, sql sever, graphite, elasticsearch.,etc.,
+
+
+Graphite:
+=========
+
+-> its one the datasource for storing the telemetric data.
+-> predominanaly used for storing telemetric data.
+-> its free and open source.
+-> Data in graphite is stored in buckets.
+-> bucket is collection of telemetry data.
+-> bucket tree is identified by a "." character. eg: shoes.loafers.count
+-> counter bukcet is increased by the value it receives.
+-> gaugle bucket value is set by the value it receives.
+-> timer bucket is set by the value it receives.
+
+
+StatsD:
+========
+
+-> to send data to graphite, we need to setup socket connection and other overhead is there.
+-> used for collection data and passing them to graphite.
+-> data is sent as plain text. by default works on udp protocol.
+-> data format <bucket>:<value>|Type   . eg: sales.jackets:1|c
+
